@@ -41,7 +41,7 @@ news_hub/
 
 ```bash
 pip install -r requirements.txt
-pytest                      # 31 тест на SQLite у пам'яті
+pytest                      # 32 тести на SQLite у пам'яті
 mypy --strict news_hub      # перевірка типів
 
 # база: без DATABASE_URL — файл news_hub.db (SQLite); з PostgreSQL:
