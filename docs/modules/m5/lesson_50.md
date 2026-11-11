@@ -13,9 +13,9 @@
 
 | Урок | Крок |
 |---|---|
-| 48 | образ `news_hub`: `Dockerfile`, `.dockerignore`, `/health/ready`, тести образу |
-| **49** | **Compose для обох проєктів; nginx; реальний IP клієнта; деплой і бекап** |
-| 50 | CI/CD: тести й збірка образу на кожен PR |
+| 49 | образ `news_hub`: `Dockerfile`, `.dockerignore`, `/health/ready`, тести образу |
+| **50** | **Compose для обох проєктів; nginx; реальний IP клієнта; деплой і бекап** |
+| 51 | CI/CD: тести й збірка образу на кожен PR |
 
 Проєкти: [`news_hub`](https://github.com/NikoriakViktor/PY-Course-Victor-Nikoriak-11-11-2026/tree/main/module_5/lessons/lesson_50_compose_deploy/news_hub), [`crispy_notes_project`](https://github.com/NikoriakViktor/PY-Course-Victor-Nikoriak-11-11-2026/tree/main/module_5/lessons/lesson_50_compose_deploy/crispy_notes_project).
 

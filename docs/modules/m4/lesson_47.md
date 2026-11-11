@@ -21,11 +21,11 @@ $ curl -X POST http://127.0.0.1:8000/api/analyze/jobs -d '{"limit": 200}'       
 
 | Урок | Крок агрегатора |
 |---|---|
-| 36–39 | парсер і модель, FastAPI, база, Redis |
-| 41–43 | тести; Claude Code і RSS-джерело; аналіз LLM |
-| **46** | **безпека: запис лише адміну з JWT, RSS-джерела за URL без SSRF, підписані webhook** |
-| 47 | Telegram-бот: `/news`, `/digest`, webhook Telegram |
-| 48–50 | Docker, Compose, CI/CD |
+| 37–40 | парсер і модель, FastAPI, база, Redis |
+| 42–44 | тести; Claude Code і RSS-джерело; аналіз LLM |
+| **47** | **безпека: запис лише адміну з JWT, RSS-джерела за URL без SSRF, підписані webhook** |
+| 48 | Telegram-бот: `/news`, `/digest`, webhook Telegram |
+| 49–51 | Docker, Compose, CI/CD |
 
 Проєкт: [`news_hub`](https://github.com/NikoriakViktor/PY-Course-Victor-Nikoriak-11-11-2026/tree/main/module_4/lessons/lesson_47_security_advanced/news_hub).
 

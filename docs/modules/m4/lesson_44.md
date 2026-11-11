@@ -19,12 +19,12 @@
 
 | Урок | Крок агрегатора |
 |---|---|
-| 36–39 | парсер і модель, FastAPI, база, Redis |
-| 41 | тести: unit / integration, мок і фейк мережі, покриття |
-| 42 | Claude Code у проєкті; друге джерело (RSS) |
-| **43** | **LLM: підсумок, тема, тональність, ключові слова — Gemini або Anthropic за одним інтерфейсом** |
-| 47 | Telegram-бот: `/news`, `/digest` |
-| 48–50 | Docker, Compose, CI/CD |
+| 37–40 | парсер і модель, FastAPI, база, Redis |
+| 42 | тести: unit / integration, мок і фейк мережі, покриття |
+| 43 | Claude Code у проєкті; друге джерело (RSS) |
+| **44** | **LLM: підсумок, тема, тональність, ключові слова — Gemini або Anthropic за одним інтерфейсом** |
+| 48 | Telegram-бот: `/news`, `/digest` |
+| 49–51 | Docker, Compose, CI/CD |
 
 Проєкт: [`news_hub`](https://github.com/NikoriakViktor/PY-Course-Victor-Nikoriak-11-11-2026/tree/main/module_4/lessons/lesson_44_llm_api/news_hub).
 

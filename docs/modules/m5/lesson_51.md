@@ -10,9 +10,9 @@
 
 | Урок | Крок |
 |---|---|
-| 48 | образ `news_hub`, тести образу |
-| 49 | Compose для обох проєктів; nginx; деплой і бекап |
-| **50** | **CI на кожен PR: тести ×2 версії Python, мінімальні версії, PostgreSQL, типи, образ + smoke; CD: образ у ghcr.io з `main`** |
+| 49 | образ `news_hub`, тести образу |
+| 50 | Compose для обох проєктів; nginx; деплой і бекап |
+| **51** | **CI на кожен PR: тести ×2 версії Python, мінімальні версії, PostgreSQL, типи, образ + smoke; CD: образ у ghcr.io з `main`** |
 
 Проєкти: [`news_hub`](https://github.com/NikoriakViktor/PY-Course-Victor-Nikoriak-11-11-2026/tree/main/module_5/lessons/lesson_51_ci_cd/news_hub), [`crispy_notes_project`](https://github.com/NikoriakViktor/PY-Course-Victor-Nikoriak-11-11-2026/tree/main/module_5/lessons/lesson_51_ci_cd/crispy_notes_project). Workflows: [`.github/workflows/news_hub.yml`](https://github.com/NikoriakViktor/PY-Course-Victor-Nikoriak-11-11-2026/blob/main/.github/workflows/news_hub.yml), [`.github/workflows/crispy_notes.yml`](https://github.com/NikoriakViktor/PY-Course-Victor-Nikoriak-11-11-2026/blob/main/.github/workflows/crispy_notes.yml).
 
