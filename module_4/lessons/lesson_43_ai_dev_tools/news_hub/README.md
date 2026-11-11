@@ -4,14 +4,14 @@
 
 | Урок | Крок |
 |---|---|
-| 36 | стартовий парсер з анотаціями типів; `NewsItem` на Pydantic |
-| 37 | FastAPI: `GET /api/news`, `POST /api/scrape`, `/docs`, Postman |
-| 38 | SQLAlchemy: новини в базі, унікальний `url`, повний CRUD, Alembic |
-| 39 | middleware, кеш і rate limit на Redis, фоновий збір |
-| 41 | тести: unit / integration, HTML-фікстури, мок і фейк мережі, httpx, покриття |
-| **42** | **Claude Code у проєкті: CLAUDE.md, дозволи, hook; друге джерело — RSS «Української правди», написане AI за тестами** ← ти тут |
-| 43 | Gemini: підсумок, категорія, тональність |
-| 47 | Telegram-бот: `/news`, `/digest` |
+| 37 | стартовий парсер з анотаціями типів; `NewsItem` на Pydantic |
+| 38 | FastAPI: `GET /api/news`, `POST /api/scrape`, `/docs`, Postman |
+| 39 | SQLAlchemy: новини в базі, унікальний `url`, повний CRUD, Alembic |
+| 40 | middleware, кеш і rate limit на Redis, фоновий збір |
+| 42 | тести: unit / integration, HTML-фікстури, мок і фейк мережі, httpx, покриття |
+| **43** | **Claude Code у проєкті: CLAUDE.md, дозволи, hook; друге джерело — RSS «Української правди», написане AI за тестами** ← ти тут |
+| 44 | Gemini: підсумок, категорія, тональність |
+| 48 | Telegram-бот: `/news`, `/digest` |
 | 48–50 | Docker, Compose, CI/CD |
 
 ## Що тут
@@ -84,4 +84,4 @@ uvicorn news_hub.api:app --reload
 Урок 43: `rss.py` і зміни в `models.py` написав Claude Code (`claude -p`) за специфікацією `tests/unit/test_pravda.py`.
 Рецензія його коду — `tests/unit/test_pravda_review.py`.
 
-Розбір змін — [урок 43 у книзі курсу](https://nikoriakviktor.github.io/PY-Course-Victor-Nikoriak-11-11-2026/modules/m4/lesson_42/).
+Розбір змін — [урок 43 у книзі курсу](https://nikoriakviktor.github.io/PY-Course-Victor-Nikoriak-11-11-2026/modules/m4/lesson_43/).

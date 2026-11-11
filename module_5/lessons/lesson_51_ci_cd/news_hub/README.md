@@ -4,18 +4,18 @@
 
 | Урок | Крок |
 |---|---|
-| 36 | стартовий парсер з анотаціями типів; `NewsItem` на Pydantic |
-| 37 | FastAPI: `GET /api/news`, `POST /api/scrape`, `/docs`, Postman |
-| 38 | SQLAlchemy: новини в базі, унікальний `url`, повний CRUD, Alembic |
-| 39 | middleware, кеш і rate limit на Redis, фоновий збір |
-| 41 | тести: unit / integration, HTML-фікстури, мок і фейк мережі, httpx, покриття |
-| 42 | Claude Code у проєкті: CLAUDE.md, дозволи, hook; друге джерело — RSS «Української правди», написане AI за тестами |
-| 43 | LLM: підсумок, тема, тональність, ключові слова — Gemini (або Anthropic) за спільним інтерфейсом, перевірка Pydantic, кеш, circuit breaker |
-| 46 | безпека: запис лише адміну з JWT, RSS-джерела за URL без SSRF, підписані webhook |
-| 47 | Telegram-бот: `/news`, `/digest`, підписки на слова й сповіщення, webhook у FastAPI |
-| 48 | Docker: образ застосунку — `Dockerfile`, `.dockerignore`, користувач без root, HEALTHCHECK, `/health/ready` |
-| 49 | Compose: nginx → api → PostgreSQL + Redis, міграції окремим кроком, бот; реальний IP клієнта за nginx; бекап |
-| **50** | **CI/CD: GitHub Actions на кожен PR — тести ×2 Python, мінімальні версії, PostgreSQL, mypy, образ + smoke; образ у ghcr.io з main** ← ти тут |
+| 37 | стартовий парсер з анотаціями типів; `NewsItem` на Pydantic |
+| 38 | FastAPI: `GET /api/news`, `POST /api/scrape`, `/docs`, Postman |
+| 39 | SQLAlchemy: новини в базі, унікальний `url`, повний CRUD, Alembic |
+| 40 | middleware, кеш і rate limit на Redis, фоновий збір |
+| 42 | тести: unit / integration, HTML-фікстури, мок і фейк мережі, httpx, покриття |
+| 43 | Claude Code у проєкті: CLAUDE.md, дозволи, hook; друге джерело — RSS «Української правди», написане AI за тестами |
+| 44 | LLM: підсумок, тема, тональність, ключові слова — Gemini (або Anthropic) за спільним інтерфейсом, перевірка Pydantic, кеш, circuit breaker |
+| 47 | безпека: запис лише адміну з JWT, RSS-джерела за URL без SSRF, підписані webhook |
+| 48 | Telegram-бот: `/news`, `/digest`, підписки на слова й сповіщення, webhook у FastAPI |
+| 49 | Docker: образ застосунку — `Dockerfile`, `.dockerignore`, користувач без root, HEALTHCHECK, `/health/ready` |
+| 50 | Compose: nginx → api → PostgreSQL + Redis, міграції окремим кроком, бот; реальний IP клієнта за nginx; бекап |
+| **51** | **CI/CD: GitHub Actions на кожен PR — тести ×2 Python, мінімальні версії, PostgreSQL, mypy, образ + smoke; образ у ghcr.io з main** ← ти тут |
 
 ## Що тут
 
@@ -258,4 +258,4 @@ Swagger (спершу Authorize — урок 47): `POST /api/scrape` (`{"source"
 Урок 43: `rss.py` і зміни в `models.py` написав Claude Code (`claude -p`) за специфікацією `tests/unit/test_pravda.py`.
 Рецензія його коду — `tests/unit/test_pravda_review.py`.
 
-Розбір змін — [урок 44 у книзі курсу](https://nikoriakviktor.github.io/PY-Course-Victor-Nikoriak-11-11-2026/modules/m4/lesson_43/).
+Розбір змін — [урок 51 у книзі курсу](https://nikoriakviktor.github.io/PY-Course-Victor-Nikoriak-11-11-2026/modules/m5/lesson_51/).
