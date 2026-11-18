@@ -20,8 +20,9 @@ For docs/**/*.md:
   * links to files of this repo on GitHub must point at existing files
   * each GitHub link to a notebook gets an "Open in Colab" badge next to it
     (except links with attributes `{ … }`, e.g. the solutions link below)
-  * a notebook that has a student copy (<name>_student.ipynb, tools/generate_student.py)
-    is linked as exercises + solutions, never directly:
+  * a notebook that has a generated student copy (<name>_student.ipynb, tools/generate_student.py;
+    the master holds solutions) is linked as exercises + solutions, never directly.
+    A hand-written exercises-only _student notebook (master without solutions) is linked plainly:
       [Відкрити вправи в Colab](<colab …_student.ipynb>){ .md-button .md-button--primary }
       [Переглянути розв’язки](<github master .ipynb>){ .solutions-link }
 
@@ -268,9 +269,25 @@ EXERCISES_PAIR_RE = re.compile(
 )
 
 
+def has_solutions(master):
+    """Майстер-ноутбук із рішеннями: студентську копію генерує tools/generate_student.py."""
+    path = ROOT / master
+    if not path.is_file():
+        return False
+    for cell in json.loads(path.read_text(encoding="utf-8")).get("cells", []):
+        tags = cell.get("metadata", {}).get("tags", [])
+        if "instructor" in tags or "system" in tags:
+            return True
+        if cell.get("cell_type") == "code" and "# BEGIN SOLUTION" in cell_source(cell):
+            return True
+    return False
+
+
 def has_student_copy(target):
+    """X.ipynb з генерованою X_student.ipynb. Студентський ноутбук без рішень у майстрі
+    (лише вправи, написаний окремо) лінкується звичайним посиланням, без пари «розв'язки»."""
     return target.endswith(".ipynb") and not target.endswith("_student.ipynb") \
-        and (ROOT / (target[:-len(".ipynb")] + "_student.ipynb")).is_file()
+        and (ROOT / (target[:-len(".ipynb")] + "_student.ipynb")).is_file() and has_solutions(target)
 
 
 def sync_doc(path, errors):
@@ -289,7 +306,8 @@ def sync_doc(path, errors):
         target = unquote((m[1] or m[2]).rstrip("/"))
         if not (ROOT / target).exists():
             errors.append(f"{rel}: link to missing file {target}")
-        elif (has_student_copy(target) or target.endswith("_student.ipynb")) and m.start() not in paired:
+        elif (has_student_copy(target) or has_student_copy(target.replace("_student.ipynb", ".ipynb"))) \
+                and m.start() not in paired:
             master = target.replace("_student.ipynb", ".ipynb")
             errors.append(f"{rel}: {master} has a student copy — link it as the pair "
                           f"[Відкрити вправи в Colab](<colab {master[:-6]}_student.ipynb>){{ .md-button .md-button--primary }} "
